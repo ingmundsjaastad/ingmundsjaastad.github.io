@@ -33,3 +33,37 @@ body  {
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 { 
+	font-weight: 500; 
+	margin: 0;
+	padding: 0;
+}
+	
+h1 {font-size: 2rem; margin: .67rem 0;}
+h2 {font-size: 1.5rem; margin: .83rem 0; }
+h3 {font-size: 1.17rem; font-weight: 600; margin: 1.33rem 0; }
+h4 {font-size: 1rem; font-weight: bold; margin: 1rem 0; }
+h5 {font-size: 0.83rem; font-weight: bold; margin: 1.67rem 0; }
+h6 {font-size: 0.67rem; font-weight: bold; margin: 2.33rem 0; }
+
+	h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small {
+		padding-left: .6rem;
+		opacity: 0.8;
+	}
+	
+	.header-count {
+		counter-reset: h2;
+	}
+
+	.header-count h2 {counter-reset: h3; }
+		.header-count h3 {counter-reset: h4; }
+		.header-count h4 {counter-reset: h5; }
+		.header-count h5 {counter-reset: h6; }
+		.header-count h2.nocount, .header-count h3.nocount, .header-count h4.nocount, .header-count h5.nocount { counter-reset: none }
+
+		.header-count h2:before {counter-increment: h2; content: counter(h2) ".\0000a0\0000a0"}
+		.header-count h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) ".\0000a0\0000a0"}
+		.header-count h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) ".\0000a0\0000a0"}
+		.header-count h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ".\0000a0\0000a0"}
+		.header-count h6:before {counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ".\0000a0\0000a0"}
+		.header-count h2.nocount:before, .header-count h3.nocount:before, .header-count h4.nocount:before, .header-count h5.nocount:before, .header-count h6.nocount:before {content: none; counter-increment: none;}
