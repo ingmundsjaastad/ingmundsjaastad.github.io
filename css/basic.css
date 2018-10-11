@@ -1,3 +1,32 @@
+:root {
+	--fontbody: 300 1rem/1.5rem Roboto,sans-serif;
+	--text-color-normal: #212121;
+	
+	--danger-color: #ff4444;
+	--danger-color-dark: #CC0000;
+	--warning-color: #ffbb33;
+	--warning-color-dark: #FF8800;
+	--success-color: #00C851;
+	--success-color-dark: #007E33;
+	--info-color: #33b5e5;
+	--info-color-dark: #0099CC;
+
+
+	--belizehole: #2980B9;
+	--wetasphalt: #34495E;
+	--midnightblue: #2C3E50;
+	--amethyst: #9B59B6;
+	--wisteria: #8E44AD;
+	--sunflower: #F1C40F;
+	--orange: #F39C12;
+	--carrot: #E67E22;
+	--pumpkin: #D35400;
+	--onekindye: #F08F90;
+	--chestnutrose: #D24D57;
+	--alizarin: #E74C3C;
+	--pomegranate: #C0392B;
+
+}
 
 html {
     -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
@@ -10,11 +39,8 @@ html {
 
 body  {
     margin: 0;
-    font-family: Roboto,sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #212529;
+    font: var(--fontbody);
+    color: var(--text-color-normal);
     text-align: left;
     background-color: #fff;
 }
